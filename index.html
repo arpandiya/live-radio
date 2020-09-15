@@ -26,7 +26,7 @@
     <!-- NAVIGATION BAR -->
     <!-- <div class="container-fluid"> -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top my-nav" id="navbar-example2">
-  <a class="navbar-brand" id="ul-nav" href="#">Radio Adira LIVE</a>
+  <a class="navbar-brand" id="brand" href="#">Radio Adira LIVE</a>
   <button class="navbar-toggler pt-3" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -61,7 +61,7 @@
     
     <div data-spy="scroll" data-target="#navbar-example2" data-offset="0">
         <!-- HOME_SECTION -->
-        <div id="home" >
+        <div id="home" class="mb-4">
             <!-- jumbotron -->
             <div class="jumbotron jumbo">
   <h1 class="display-4 text-center pt-5 mt-5 text-white font-weight-bold " id="heading">LISTEN LIVE 24/7</h1>
@@ -82,7 +82,25 @@
 </div>
         </div>
 
-        <div id="live" >
+        <div id="live" class="mt-4">
+
+            <div class="jumbotron jumbo">
+                <h1 class="display-4 text-center pt-5 mt-5 text-white font-weight-bold " id="heading">LISTEN LIVE 24/7</h1>
+                <div class="display-2 text-center">
+                    <img id="play-img" src="images/play.png" onclick = "play()"  ondblclick="pause()" alt="">
+                    
+                          <audio class="mb-4" id="myLive" controls autoplay hidden>
+                
+                <source id="live" src="http://stream.zeno.fm/b7rwd60npwzuv" type="audio/mpeg">
+              
+              </audio>
+                    
+                    
+                </div>
+                <p class="lead text-center mt-5 text-white font-weight-bold" id="sub-heading">Stay tuned us !</p>
+                <hr class="my-4">
+                
+              </div>
 
         </div>
 
