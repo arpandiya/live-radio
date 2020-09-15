@@ -3,107 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<!-- Jquery -->
+
+<link rel="stylesheet" href="stylesheets/styles.css">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <title>RADIO ADIRA - LIVE</title>
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- Font-awesome -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>LIVE Radio Adira</title>
 </head>
 <body>
-    <nav class="nav-container">
-        <div class="logo"><a href="#">LIVE-nz |<span class="lead">Nepali radio 24/7</span> </a></div>
-        <ul class="nav-links">
-            <li class="nav-link" id="bars">
-                <a href="#"> <i class="fa fa-bars"></i></a>
-            </li>
+    <!-- NAVIGATION BAR -->
+    <!-- <div class="container-fluid"> -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top my-nav" id="navbar-example2">
+  <a class="navbar-brand" id="ul-nav" href="#">Radio Adira LIVE</a>
+  <button class="navbar-toggler pt-3" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav ml-auto" >
+      <li class="nav-item active">
+        <a class="nav-link" id="ul-nav" href="#home">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="ul-nav" href="#live">LIVE</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="ul-nav"  href="#about">About</a>
+      </li>
 
-            <li class="nav-link">
-                <a href="#">HOME</a>
-            </li>
-
-            <li class="nav-link">
-                <a href="#" id="live">Live</a>
-            </li>
-
-            <li class="nav-link">
-                <a href="#" id="about">About</a>
-            </li>
-
-            <li class="nav-link">
-                <a href="#" id="contact">Contact</a>
-            </li>
-
-           
-        </ul>
-    </nav>
+      <li class="nav-item">
+        <a class="nav-link" id="ul-nav"  href="#contact">Contact</a>
+      </li>
+      <!-- <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="ul-nav" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown link
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li> --->
+    </ul>
+  </div>
+</nav>
     
+    <div data-spy="scroll" data-target="#navbar-example2" data-offset="0">
+        <!-- HOME_SECTION -->
+        <div id="home" >
+            <!-- jumbotron -->
+            <div class="jumbotron jumbo">
+  <h1 class="display-4 text-center pt-5 mt-5 text-white font-weight-bold " id="heading">LISTEN LIVE 24/7</h1>
+  <div class="display-2 text-center">
+      <img id="play-img" src="images/play.png" onclick = "play()"  ondblclick="pause()" alt="">
+      
+            <audio class="mb-4" id="myLive" controls autoplay hidden>
+  
+  <source id="live" src="http://stream.zeno.fm/b7rwd60npwzuv" type="audio/mpeg">
 
-    <!-- Slides -->
-    <section id="slides">
-        <div class="live">
-            <audio class="audio" controls autoplay>
-               <source src="http://stream.zeno.fm/b7rwd60npwzuv" type="audio/mpeg">
-            </audio> 
-        <h3 id="lead">Keep Listening Us</h3>
-        </div>
-    </section>
-    <hr style="margin: 20px 0px;">
-    <!-- Live Section -->
-    <section class="live-section" >
-            <h3 class="heading">We Are LIVE</h3>
-
-            <div id="mic">
-                <i class="fa fa-microphone fa-5x" aria-hidden="true"></i>
-            </div>
-
-            <p>We are LIVE from September 2020. </p>
-    </section>
-<hr style="margin: 20px 0px;">
-    <!-- Live Section -->
-    <section class="about-section" >
-        <h3 class="heading">About Us</h3>
-
-        <div id="mic">
-            <i class="fa fa-microphone fa-5x" aria-hidden="true"></i>
+</audio>
+      
+      
+  </div>
+  <p class="lead text-center mt-5 text-white font-weight-bold" id="sub-heading">Stay tuned us !</p>
+  <hr class="my-4">
+  
+</div>
         </div>
 
-        <p>An attempt to run a 24/7 LIVE radio station in New Zealand based in Nepali language. </p>
-    </section>
-    <hr style="margin: 20px 0px;">
-    <!-- Live Section -->
-    <section class="contact-section">
-        <h3 class="heading">Contact Us</h3>
+        <div id="live" >
 
-            <div id="mic">
-                <i class="fa fa-microphone fa-5x" aria-hidden="true"></i>
-            </div>
+        </div>
 
-            <p>If you have any suggestion to take the radio station to next level or have contents to relay from us; Please contact us at: info@radioadira.com </p>
-    </section>
+        <div id="about" >
 
-    <script src="rad.js"></script>
+        </div>
+
+        <div id="contact" >
+
+        </div>
+  <!-- <h4 id="fat">@fat</h4>
+  <p>...</p>
+  <h4 id="mdo">@mdo</h4>
+  <p>...</p>
+  <h4 id="one">one</h4>
+  <p>...</p>
+  <h4 id="two">two</h4>
+  <p>...</p>
+  <h4 id="three">three</h4>
+  <p>...</p> -->
+</div>
+
+     {{!-- </div> FLUID_CONTAINER --}}
+
+<script src="javascripts/rad.js"></script>
 </body>
 </html>
 
-<script>
-    $(document).ready(function(){
-      $("#live").click(function(){
-        $("#slides").slideToggle();
-      });
-
-      $("#about").click(function(){
-        $("#slides").slideToggle(),
-        $(".live-section").slideToggle();
-      });
-
-      $("#contact").click(function(){
-        $("#slides").slideToggle();
-        $(".live-section").slideToggle();
-        $(".about-section").slideToggle();
-        
-      });
-      
-    });
-    </script>
