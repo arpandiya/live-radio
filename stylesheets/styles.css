@@ -60,3 +60,7 @@
     background-size:cover;
     background-repeat: no-repeat;
 }
+
+#play-img {
+    cursor: pointer;
+}
