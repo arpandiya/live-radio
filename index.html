@@ -19,6 +19,7 @@
 
 <!-- Font-awesome -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <title>LIVE Radio Adira</title>
 </head>
@@ -30,7 +31,7 @@
   <button class="navbar-toggler pt-3" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+  <div class="collapse navbar-collapse mobile-nav" id="navbarNavDropdown">
     <ul class="navbar-nav ml-auto" >
       <li class="nav-item active">
         <a class="nav-link" id="ul-nav" href="#home">Home <span class="sr-only">(current)</span></a>
@@ -60,56 +61,95 @@
 </nav>
     
     <div data-spy="scroll" data-target="#navbar-example2" data-offset="0">
+
         <!-- HOME_SECTION -->
+        <div class="row" style="display: flexbox;">
+          <div class="col-lg-12 col-md-12 col-sm-12">
         <div id="home" class="mb-4">
             <!-- jumbotron -->
             <div class="jumbotron jumbo">
   <h1 class="display-4 text-center pt-5 mt-5 text-white font-weight-bold " id="heading">LISTEN LIVE 24/7</h1>
-  <div class="display-2 text-center">
+  <div class="display-2 text-center " style="flex-wrap: wrap;">
       <img id="play-img" src="images/play.png" onclick = "play()"  ondblclick="pause()" alt="">
-      
-            <audio class="mb-4" id="myLive" controls autoplay hidden>
+          <audio class="mb-4" id="myLive" controls autoplay hidden>
   
-  <source id="live" src="http://stream.zeno.fm/b7rwd60npwzuv" type="audio/mpeg">
+                <source id="live"  src = "http://stream.zeno.fm/b7rwd60npwzuv" type="audio/mpeg">
 
-</audio>
-      
-      
+          </audio>
+
   </div>
   <p class="lead text-center mt-5 text-white font-weight-bold" id="sub-heading">Stay tuned us !</p>
   <hr class="my-4">
-  
-</div>
+  </div>
+
         </div>
 
-        <div id="live" class="mt-4">
-
-            <div class="jumbotron jumbo">
-                <h1 class="display-4 text-center pt-5 mt-5 text-white font-weight-bold " id="heading">LISTEN LIVE 24/7</h1>
-                <div class="display-2 text-center">
-                    <img id="play-img" src="images/play.png" onclick = "play()"  ondblclick="pause()" alt="">
-                    
-                          <audio class="mb-4" id="myLive" controls autoplay hidden>
+        <!-- LIVE PAGE -->
+        <div class="bg-danger" style="height: 15px; opacity: 0.9;"></div>
+        <div id="live"  style="display: flex" >
+         
+          <div class="display-5 m-auto headline container" style="align-items: center;" > 
+            <h1 class="text-center  text-white p-4 mt-4 pt-4 rounded" style="margin-top: 50px;"><i class="fa fa-microphone fa-5x"></i></h1>
+            
+              <h1 class="text-center p-4 font-weight-bolder text-white">We are LIVE </h2>
                 
-                <source id="live" src="http://stream.zeno.fm/b7rwd60npwzuv" type="audio/mpeg">
               
-              </audio>
-                    
-                    
-                </div>
-                <p class="lead text-center mt-5 text-white font-weight-bold" id="sub-heading">Stay tuned us !</p>
-                <hr class="my-4">
+              <p class="lead text-center text-light"> YES ! We are live. As we go we will play songs of diffrent genres. We do expect comments and suggestions from you about the contents and support is appreciated at all times.</p>
+          </div>
+
+
+        </div>
+       
+        <!-- ABOUT US PAGE -->
+        <div class="bg-danger" style="height: 15px; opacity: 0.9;"></div>
+        <div id="about" class="text-light" >
+              <div class="display-5 m-auto headline container" style="align-items: center;" > 
+                <h1 class="text-center p-4 mt-4 pt-4 rounded" style="margin-top: 50px;"><i class="fa fa-microphone fa-5x"></i></h1>
+              
+                <h1 class="text-center p-4 font-weight-bolder">ABOUT US </h2>
+                  
                 
-              </div>
+                <p class="lead text-center">We are forming a Nepalese community around New Zealand. Our goal is to keep all of us connected.</p>
+            </div>
+            </div>
+        </div>
+          <!-- CONTACT US PAGE -->
+          
+          <div class="bg-danger" style="height: 15px; opacity: 0.9; width: 100%;"></div>
+        <div id="contact"  class="text-light mt-4 p-4" >
+            <div class="display-5 m-auto headline container" style="align-items: center;" > 
+              <h1 class="text-center p-4 mt-4 pt-4 rounded" style="margin-top: 50px;"><i class="fa fa-microphone fa-5x"></i></h1>
+            
+              <h1 class="text-center p-4 font-weight-bolder">CONTACT US </h2>
+                
+              
+              <p class="lead text-center">We are forming a Nepalese community around New Zealand. Our goal is to keep all of us connected. CONTACT US AT : info@radioadira.org</p>
+          </div>
+
+          <!-- Contact-form -->
+
+          <div class="card m-auto" style="width:30%; margin-top: 10%; opacity: 0.8">
+            <div class="card-header text-danger text-center display-5 font-weight-bolder">Contact form</div>
+            <div class="card-body">
+              <form action="/contact" class="form-group m-auto" method="post">
+                <input type="text" class="form-control mb-3" placeholder="Full Name">
+                <input type="email" class="form-control mb-3" placeholder="Email">
+                <textarea class="form-control mb-3 overflow-hidden" placeholder="Comments.."></textarea>
+                <input type="button" value="Submit" class="btn btn-danger m-auto">
+    
+              </form>
+    
+            </div>
+          </div>
+
+
+
+
+
 
         </div>
 
-        <div id="about" >
-
         </div>
-
-        <div id="contact" >
-
         </div>
   <!-- <h4 id="fat">@fat</h4>
   <p>...</p>
@@ -124,7 +164,8 @@
 </div>
 
      <!-- </div> FLUID_CONTAINER -->
-
+    </div>
+  </div>
 <script src="javascripts/rad.js"></script>
 </body>
 </html>

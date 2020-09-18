@@ -20,3 +20,5 @@ function pause() {
  function myPlay(){
     live.pause();
 } 
+
+
